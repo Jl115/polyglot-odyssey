@@ -1,0 +1,218 @@
+# =============================================================================
+# 100-Tage Curriculum — .gitignore
+# Covers: Rust, TypeScript/Node, C/C++, Zig, Python, Dart, WASM, infra
+# =============================================================================
+
+# --- Rust / Cargo ---
+target/
+**/target/
+*.rs.bk
+Cargo.lock            # keep this line OUT if you want lockfiles for bins;
+                       # these are per-day binary crates, so uncomment to ignore
+                       # → actually we COMMIT Cargo.lock for binaries (see below)
+# Cargo.lock           # (left commented: we DO commit Cargo.lock for the day bins)
+# If you add a workspace library, ignore its lockfile manually.
+
+# --- Node / TypeScript / JavaScript ---
+node_modules/
+**/node_modules/
+dist/
+build/
+.next/
+.nuxt/
+.output/
+.cache/
+.parcel-cache/
+.turbo/
+.vercel/
+*.tsbuildinfo
+*.js.map
+*.d.ts.map
+.npm/
+.pnpm-store/
+.yarn/cache
+.yarn/install-state.gz
+.pnp.*
+coverage/
+.nyc_output/
+*.lcov
+
+# --- Deno ---
+.deno/
+
+# --- Bun ---
+bun.lockb            # keep if you want lockfile; comment out to ignore
+
+# --- C / C++ ---
+*.o
+*.obj
+*.so
+*.so.*
+*.dylib
+*.dll
+*.a
+*.lib
+*.exe
+*.out
+*.elf
+*.bin
+*.hex
+*.hexfile
+*.map
+compile_commands.json
+.clang-format
+.clang-tidy
+# build dirs commonly used
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile.in
+aclocal.m4
+autom4te.cache/
+configure
+config.log
+config.status
+*.la
+*.lo
+.deps/
+.libs/
+
+# --- Zig ---
+zig-cache/
+zig-out/
+**/zig-cache/
+**/zig-out/
+*.zig.o
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+.env
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+htmlcov/
+*.egg-info/
+*.egg
+dist/
+build/
+pip-wheel-metadata/
+pip-log.txt
+jupyter_notebook_config.py
+.ipynb_checkpoints/
+# Jupyter
+*.ipynb_checkpoints
+
+# --- Dart / Flutter ---
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.dart_tool/
+.fvm/
+
+# --- WASM / wasm-pack ---
+pkg/
+**/pkg/
+wasm-pack.log
+*.wasm.obj
+
+# --- AI / ML model artifacts (Block 3) ---
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.gguf
+*.onnx
+*.tflite
+*.mlmodel
+*.h5
+*.ckpt
+*.tar.gz
+wandb/
+mlruns/
+runs/
+outputs/
+checkpoints/
+
+# --- K8s / infra (Block 3/5) ---
+*.kubeconfig
+kubeconfig
+.kube/
+helm-debug/
+values.local.yaml
+
+# --- Logs & runtime ---
+*.log
+logs/
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# --- Secrets / keys / certs (Block 4 — NEVER commit these) ---
+*.pem
+*.key
+*.p12
+*.pfx
+*.keystore
+*.jks
+secrets/
+.env
+.env.*
+!.env.example
+*.local
+
+# --- Editor / IDE ---
+.vscode/
+!.vscode/settings.json.example
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+.fleet/
+.zed/
+*.sublime-workspace
+*.sublime-project
+.history/
+
+# --- OS cruft ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+$RECYCLE.BIN/
+
+# --- Misc dev tooling ---
+.direnv/
+.envrc
+.task/
+.todo
+TODO.md            # local notes only (uncomment to ignore local TODOs)
+# Keep docs/ TODO lists tracked though, so leave commented:
+# TODO.md
+
+# --- Tauri (Block 1 interop) ---
+src-tauri/target/
+**/src-tauri/target/
+
+# --- Local progress scratch (created by tooling, not curriculum content) ---
+progress.md
