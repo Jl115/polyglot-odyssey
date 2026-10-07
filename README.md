@@ -21,6 +21,9 @@ commit).
 It is both a **learning plan** and a **public progress record**: your GitHub
 commit graph is the proof that you did the work.
 
+📊 **Live progress:** [docs/PROGRESS.md](docs/PROGRESS.md) — aggregated by
+`python3 tools/progress.py`, which also verifies the per-block markers.
+
 ---
 
 ## 🗂️ Project Structure
@@ -29,6 +32,7 @@ commit graph is the proof that you did the work.
 .
 ├── README.md                      ← you are here (curriculum overview)
 ├── docs/                          ← daily lesson guides (theory + tasks)
+│   ├── PROGRESS.md                ← aggregated progress dashboard
 │   ├── block1-memory-safe-mastery/
 │   │   ├── README.md              ← block overview + progress checklist
 │   │   ├── Day001.md … Day020.md  ← one file per day
@@ -37,6 +41,7 @@ commit graph is the proof that you did the work.
 │   ├── block4-security-and-pqc/
 │   ├── block5-edge-and-future-systems/
 │   └── block6-integration-and-mastery/
+├── tools/                         ← helper scripts (progress aggregation)
 └── days/                          ← your hands-on code per day
     ├── day1/                      ← Rust crate (Cargo project)
     └── day2/
